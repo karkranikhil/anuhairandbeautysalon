@@ -1,230 +1,581 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Luxury Hair & Beauty Salon in Tarneit | Anu Salon</title>
-<meta name="description" content="Premium hair & beauty services in Tarneit. Haircuts, colour, facials & more. Call now to book.">
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Anu Hair And Beauty Salon | Premium Services in Tarneit</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-primary": "#b6c7ec",
+                        "surface-container-highest": "#e5e2dd",
+                        "error": "#ba1a1a",
+                        "outline": "#75777e",
+                        "surface-tint": "#4f5e7f",
+                        "on-background": "#1c1c19",
+                        "background": "#fcf9f4",
+                        "outline-variant": "#c5c6ce",
+                        "secondary-container": "#fed488",
+                        "surface-container": "#f0ede9",
+                        "on-tertiary-container": "#868772",
+                        "inverse-surface": "#31302d",
+                        "tertiary-fixed-dim": "#c8c8b0",
+                        "on-primary-container": "#7585a8",
+                        "on-surface": "#1c1c19",
+                        "surface-dim": "#dcdad5",
+                        "primary-fixed-dim": "#b6c7ec",
+                        "on-surface-variant": "#44474d",
+                        "surface": "#fcf9f4",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-fixed-variant": "#5d4201",
+                        "on-error-container": "#93000a",
+                        "secondary": "#775a19",
+                        "on-secondary": "#ffffff",
+                        "surface-container-low": "#f6f3ee",
+                        "on-secondary-container": "#785a1a",
+                        "surface-bright": "#fcf9f4",
+                        "on-primary-fixed": "#091b38",
+                        "error-container": "#ffdad6",
+                        "on-error": "#ffffff",
+                        "tertiary": "#040500",
+                        "surface-variant": "#e5e2dd",
+                        "secondary-fixed-dim": "#e9c176",
+                        "inverse-on-surface": "#f3f0eb",
+                        "on-tertiary-fixed": "#1b1d0e",
+                        "secondary-fixed": "#ffdea5",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-container": "#1d1f10",
+                        "on-primary-fixed-variant": "#374766",
+                        "on-tertiary-fixed-variant": "#474836",
+                        "surface-container-high": "#ebe8e3",
+                        "on-secondary-fixed": "#261900",
+                        "primary-container": "#0b1d3a",
+                        "primary-fixed": "#d7e2ff",
+                        "on-primary": "#ffffff",
+                        "primary": "#00030f",
+                        "tertiary-fixed": "#e4e4cc"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Noto Serif"],
+                        "body": ["Plus Jakarta Sans"],
+                        "label": ["Plus Jakarta Sans"]
+                    }
+                },
+            },
+        }
+    </script>
 <style>
-*{margin:0;padding:0;box-sizing:border-box;}
-html{scroll-behavior:smooth;}
-body{font-family:Poppins,sans-serif;background:#0d1b2a;color:#fff;overflow-x:hidden;}
-
-h1,h2,h3{font-family:'Playfair Display',serif;}
-
-section{padding:100px 10%;}
-
-/* HERO */
-.hero{
-height:100vh;
-background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.8)),
-url('https://images.unsplash.com/photo-1522337360788-8b13dee7a37e') center/cover;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-}
-
-.hero h1{
-font-size:60px;
-margin-bottom:20px;
-animation:fadeUp 1s ease;
-}
-
-.hero p{
-opacity:0.8;
-margin-bottom:30px;
-animation:fadeUp 1.5s ease;
-}
-
-.btn{
-padding:15px 30px;
-border-radius:40px;
-text-decoration:none;
-margin:10px;
-display:inline-block;
-transition:0.3s;
-}
-
-.btn-gold{
-background:linear-gradient(45deg,#d4af37,#f5d77a);
-color:#000;
-}
-
-.btn-outline{
-border:1px solid #fff;
-color:#fff;
-}
-
-.btn:hover{
-transform:translateY(-3px) scale(1.05);
-}
-
-/* GLASS CARD */
-.card{
-background:rgba(255,255,255,0.05);
-backdrop-filter:blur(10px);
-padding:30px;
-border-radius:20px;
-transition:0.3s;
-}
-
-.card:hover{
-transform:translateY(-10px);
-}
-
-/* GRID */
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:30px;
-}
-
-/* SECTION TITLE */
-.title{
-text-align:center;
-margin-bottom:50px;
-}
-
-/* GALLERY */
-.gallery img{
-width:100%;
-border-radius:15px;
-transition:0.4s;
-}
-.gallery img:hover{
-transform:scale(1.08);
-}
-
-/* REVIEWS */
-.reviews{
-background:#111;
-text-align:center;
-}
-
-/* FLOATING CALL */
-.call{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#d4af37;
-color:#000;
-padding:15px 20px;
-border-radius:50px;
-text-decoration:none;
-font-weight:bold;
-box-shadow:0 10px 30px rgba(0,0,0,0.4);
-}
-
-/* ANIMATION */
-.reveal{
-opacity:0;
-transform:translateY(50px);
-transition:1s;
-}
-.reveal.active{
-opacity:1;
-transform:translateY(0);
-}
-
-@keyframes fadeUp{
-from{opacity:0;transform:translateY(40px);}
-to{opacity:1;transform:translateY(0);}
-}
-</style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .editorial-shadow {
+            box-shadow: 0 20px 40px rgba(11, 29, 58, 0.06);
+        }
+        .glass-nav {
+            background-color: rgba(252, 249, 244, 0.8);
+            backdrop-filter: blur(20px);
+        }
+    </style>
 </head>
-
-<body>
-
-<!-- HERO -->
-<section class="hero">
+<body class="bg-background text-on-background font-body selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- JSON-GUIDED COMPONENT: TopNavBar -->
+<nav class="docked full-width top-0 z-50 sticky glass-nav shadow-[0_20px_40px_rgba(11,29,58,0.06)]">
+<div class="flex justify-between items-center flex-wrap gap-y-3 w-full px-4 sm:px-6 py-4 max-w-7xl mx-auto">
+<div class="flex items-center gap-3 min-w-0">
+<img alt="Anu Hair & Beauty Salon logo" class="h-12 w-auto rounded-lg" src="logo.jpg"/>
+<span class="text-lg sm:text-xl md:text-2xl font-serif tracking-tighter text-[#0b1d3a] dark:text-[#fcf9f4] truncate max-w-[11rem] sm:max-w-none">Anu Hair &amp; Beauty Salon</span>
+</div>
+<div class="hidden md:flex gap-6 items-center">
+<a class="text-[#0b1d3a]/60 font-label tracking-wide text-sm hover:text-[#0b1d3a] transition-colors duration-300" href="#services">Services</a>
+<a class="text-[#0b1d3a]/60 font-label tracking-wide text-sm hover:text-[#0b1d3a] transition-colors duration-300" href="#reviews">Reviews</a>
+<span class="h-4 w-px bg-[#0b1d3a]/20"></span>
+<span class="text-xs font-semibold tracking-wide text-[#0b1d3a]/70 flex items-center gap-1.5">
+<span class="material-symbols-outlined text-base text-secondary">schedule</span>
+Open Daily: 8AM-8PM
+</span>
+</div>
+<a class="bg-primary-container text-white px-4 md:px-6 py-2.5 rounded-xl font-semibold tracking-wide text-sm active:scale-[0.98] transition-transform flex items-center gap-2 ml-auto md:ml-0" href="tel:0406907709">
+<span class="material-symbols-outlined text-sm">call</span>
+Book Now
+</a>
+<div class="md:hidden w-full flex items-center justify-center gap-5 pt-1">
+<a class="text-[#0b1d3a]/70 font-label tracking-wide text-sm hover:text-[#0b1d3a] transition-colors duration-300" href="#services">Services</a>
+<a class="text-[#0b1d3a]/70 font-label tracking-wide text-sm hover:text-[#0b1d3a] transition-colors duration-300" href="#reviews">Reviews</a>
+<span class="text-[11px] font-semibold tracking-wide text-[#0b1d3a]/65">Open Daily 8AM-8PM</span>
+</div>
+</div>
+</nav>
+<!-- HERO SECTION -->
+<header class="relative overflow-hidden pt-12 pb-24 md:pt-24 md:pb-32 bg-surface">
+<div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-7 z-10">
+<div class="flex items-center gap-2 mb-6">
+<div class="flex text-secondary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined">star_half</span>
+</div>
+<span class="text-sm font-semibold tracking-wide text-on-surface-variant">4.3★ Google Rating • Local Tarneit Salon</span>
+</div>
+<h1 class="text-4xl sm:text-5xl md:text-7xl font-serif italic text-primary-container leading-[1.1] mb-8 tracking-tight">
+                    Premium Hair &amp; <br/> Beauty Services <br/> <span class="text-secondary not-italic">in Tarneit</span>
+</h1>
+<p class="text-base sm:text-lg md:text-xl text-on-surface-variant max-w-xl mb-10 leading-relaxed">
+                    Haircuts, threading, waxing, facials, colour, keratin treatments and styling — all in one welcoming salon.
+                </p>
+<div class="flex flex-wrap gap-4 items-center">
+<a class="bg-primary-container text-white px-10 py-4 rounded-xl font-bold tracking-wide hover:opacity-90 transition-all editorial-shadow" href="tel:0406907709">
+                        Call Now
+                    </a>
+<div class="flex gap-4 ml-2">
+<a aria-label="Instagram" class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center hover:border-secondary transition-colors" href="https://www.instagram.com/p/DWzSgfMkpum/" rel="noopener noreferrer" target="_blank">
+<svg aria-hidden="true" class="w-5 h-5 text-primary-container" fill="currentColor" viewBox="0 0 24 24">
+<path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm-.2 2A3.55 3.55 0 0 0 4 7.55v8.9A3.55 3.55 0 0 0 7.55 20h8.9A3.55 3.55 0 0 0 20 16.45v-8.9A3.55 3.55 0 0 0 16.45 4h-8.9Zm9.95 1.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2.2a2.8 2.8 0 1 0 0 5.6 2.8 2.8 0 0 0 0-5.6Z"/>
+</svg>
+</a>
+<a aria-label="Facebook" class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center hover:border-secondary transition-colors" href="https://www.facebook.com/groups/743439381069294/user/1217460322/" rel="noopener noreferrer" target="_blank">
+<svg aria-hidden="true" class="w-5 h-5 text-primary-container" fill="currentColor" viewBox="0 0 24 24">
+<path d="M13.5 22v-8h2.7l.4-3h-3.1V9.2c0-.9.3-1.6 1.7-1.6h1.5V4.8c-.3 0-1.2-.1-2.3-.1-2.3 0-3.8 1.4-3.8 3.9V11H8v3h2.6v8h2.9Z"/>
+</svg>
+</a>
+</div>
+</div>
+</div>
+<div class="lg:col-span-5 relative">
+<div class="relative w-full aspect-[4/5] rounded-[2rem] overflow-hidden shadow-2xl">
+<img class="w-full h-full object-cover" data-alt="Cinematic close-up of a professional hair stylist applying luxury gold-toned hair color in a high-end salon with soft warm ambient lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBB_EjoUfvR7QMk-YL-LigF4pu2MEPj7KVlhxEztR8F0ZLQTUa9jpS5FckzfGIgniykWssH8FHQtyjN8u991h2e7toGqhNvPHQuupKTmoGBvTURyWR6qdLxrJ-0w3b5ykbA-GONE9UzJw7QZn8muyBgd2mYf13ADYS_G2IKWyAtzZBu7oL3lLtIyqKnNon6Wr8DdipFclvwsCRSi0TKTF5EdXXjcwSTOb8bARVBxtRodmypaNzVsG1EiJfBb7ne1EMrnT1HjkGNXzM-"/>
+<div class="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-[2rem]"></div>
+</div>
+<div class="absolute -bottom-6 -left-6 bg-secondary text-white p-6 rounded-2xl editorial-shadow hidden md:block">
+<p class="text-serif italic text-lg leading-snug">Where Beauty Meets Confidence</p>
+</div>
+</div>
+</div>
+</header>
+<!-- WHY CHOOSE US -->
+<section class="py-14 md:py-18 bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-x-5 gap-y-6">
+<div class="flex flex-col items-center text-center space-y-3">
+<div class="w-14 h-14 rounded-full bg-surface-container-highest flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-2xl">volunteer_activism</span>
+</div>
+<h3 class="font-semibold text-sm md:text-base text-primary-container">Friendly Service</h3>
+</div>
+<div class="flex flex-col items-center text-center space-y-3">
+<div class="w-14 h-14 rounded-full bg-surface-container-highest flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-2xl">payments</span>
+</div>
+<h3 class="font-semibold text-sm md:text-base text-primary-container">Affordable Pricing</h3>
+</div>
+<div class="flex flex-col items-center text-center space-y-3">
+<div class="w-14 h-14 rounded-full bg-surface-container-highest flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-2xl">home_work</span>
+</div>
+<h3 class="font-semibold text-sm md:text-base text-primary-container">Professional Salon</h3>
+</div>
+<div class="flex flex-col items-center text-center space-y-3">
+<div class="w-14 h-14 rounded-full bg-surface-container-highest flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-2xl">verified</span>
+</div>
+<h3 class="font-semibold text-sm md:text-base text-primary-container">Experienced</h3>
+</div>
+<div class="flex flex-col items-center text-center space-y-3 col-span-2 sm:col-span-1">
+<div class="w-14 h-14 rounded-full bg-surface-container-highest flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-2xl">handshake</span>
+</div>
+<h3 class="font-semibold text-sm md:text-base text-primary-container">Trusted</h3>
+</div>
+</div>
+</div>
+</section>
+<!-- SERVICES SECTION: Bento Grid Pattern -->
+<section class="py-20 md:py-28 bg-background" id="services">
+<div class="max-w-7xl mx-auto px-6">
+<div class="mb-12 md:mb-20 text-center">
+<h2 class="text-4xl md:text-5xl font-serif italic text-primary-container mb-4">Our Services</h2>
+<div class="w-24 h-px bg-secondary mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Hair Care -->
+<div class="bg-surface-container-lowest p-6 sm:p-8 lg:p-10 rounded-[2rem] editorial-shadow flex flex-col gap-8 h-full relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-8 opacity-5">
+<span class="material-symbols-outlined text-9xl">content_cut</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary text-3xl">content_cut</span>
+<h3 class="text-2xl font-serif text-primary-container">Hair</h3>
+</div>
+<ul class="space-y-4">
+<li class="flex justify-between items-center border-b border-surface-container pb-2">
+<span class="text-on-surface-variant">Cut &amp; Style</span>
+<span class="material-symbols-outlined text-xs text-secondary">arrow_forward</span>
+</li>
+<li class="flex justify-between items-center border-b border-surface-container pb-2">
+<span class="text-on-surface-variant">Professional Blow dry</span>
+<span class="material-symbols-outlined text-xs text-secondary">arrow_forward</span>
+</li>
+<li class="flex justify-between items-center border-b border-surface-container pb-2">
+<span class="text-on-surface-variant">Balayage &amp; Foils</span>
+<span class="material-symbols-outlined text-xs text-secondary">arrow_forward</span>
+</li>
+<li class="flex justify-between items-center border-b border-surface-container pb-2">
+<span class="text-on-surface-variant">Full Head Colour</span>
+<span class="material-symbols-outlined text-xs text-secondary">arrow_forward</span>
+</li>
+<li class="flex justify-between items-center">
+<span class="text-on-surface-variant font-bold">Keratin Treatment</span>
+<span class="material-symbols-outlined text-xs text-secondary">arrow_forward</span>
+</li>
+</ul>
+<div class="pt-4 mt-auto">
+<a class="block w-full text-center py-4 bg-primary-container text-white rounded-xl font-bold hover:scale-[1.02] transition-transform" href="tel:0406907709">Book Now</a>
+</div>
+</div>
+<!-- Beauty Services -->
+<div class="bg-primary-container p-6 sm:p-8 lg:p-10 rounded-[2rem] editorial-shadow text-white flex flex-col gap-8 h-full relative overflow-hidden">
+<div class="absolute top-0 right-0 p-8 opacity-10">
+<span class="material-symbols-outlined text-9xl">face</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary text-3xl">face</span>
+<h3 class="text-2xl font-serif text-white">Beauty</h3>
+</div>
+<ul class="space-y-4">
+<li class="flex justify-between items-center border-b border-white/10 pb-2">
+<span class="text-white/80">Precision Threading</span>
+<span class="material-symbols-outlined text-xs text-secondary">arrow_forward</span>
+</li>
+<li class="flex justify-between items-center border-b border-white/10 pb-2">
+<span class="text-white/80">Full Body Waxing</span>
+<span class="material-symbols-outlined text-xs text-secondary">arrow_forward</span>
+</li>
+<li class="flex justify-between items-center border-b border-white/10 pb-2">
+<span class="text-white/80">Brow &amp; Lash Tinting</span>
+<span class="material-symbols-outlined text-xs text-secondary">arrow_forward</span>
+</li>
+<li class="flex justify-between items-center">
+<span class="text-white/80">Face Bleach</span>
+<span class="material-symbols-outlined text-xs text-secondary">arrow_forward</span>
+</li>
+</ul>
+<div class="pt-4 mt-auto">
+<a class="block w-full text-center py-4 bg-secondary text-white rounded-xl font-bold hover:scale-[1.02] transition-transform" href="tel:0406907709">Book Now</a>
+</div>
+</div>
+<!-- Skin Care -->
+<div class="bg-surface-container-lowest p-6 sm:p-8 lg:p-10 rounded-[2rem] editorial-shadow flex flex-col gap-8 h-full relative overflow-hidden">
+<div class="absolute top-0 right-0 p-8 opacity-5">
+<span class="material-symbols-outlined text-9xl">spa</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary text-3xl">spa</span>
+<h3 class="text-2xl font-serif text-primary-container">Skin Care</h3>
+</div>
+<ul class="space-y-4">
+<li class="flex justify-between items-center border-b border-surface-container pb-2">
+<span class="text-on-surface-variant">Rejuvenating Facials</span>
+<span class="material-symbols-outlined text-xs text-secondary">arrow_forward</span>
+</li>
+<li class="flex justify-between items-center border-b border-surface-container pb-2">
+<span class="text-on-surface-variant">Skin Glow Treatments</span>
+<span class="material-symbols-outlined text-xs text-secondary">arrow_forward</span>
+</li>
+<li class="flex justify-between items-center border-b border-surface-container pb-2">
+<span class="text-on-surface-variant">Anti-Ageing Rituals</span>
+<span class="material-symbols-outlined text-xs text-secondary">arrow_forward</span>
+</li>
+<li class="flex justify-between items-center">
+<span class="text-on-surface-variant">Deep Cleanse Therapy</span>
+<span class="material-symbols-outlined text-xs text-secondary">arrow_forward</span>
+</li>
+</ul>
+<div class="pt-4 mt-auto">
+<a class="block w-full text-center py-4 bg-primary-container text-white rounded-xl font-bold hover:scale-[1.02] transition-transform" href="tel:0406907709">Book Now</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- TESTIMONIALS -->
+<section class="py-20 md:py-28 bg-surface-container-low" id="reviews">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-10 md:mb-16">
 <div>
-<h1>Luxury Hair & Beauty Experience</h1>
-<p>Premium styling, facials & beauty services in Tarneit</p>
-
-<a href="tel:0406907709" class="btn btn-gold">📞 Call Now</a>
-<a href="https://www.instagram.com/anuhairandbeautysalon/" class="btn btn-outline">Instagram</a>
-<a href="https://www.facebook.com/groups/743439381069294/user/1217460322/" class="btn btn-outline">Facebook</a>
+<h2 class="text-4xl md:text-5xl font-serif italic text-primary-container mb-4">Loved by clients across Tarneit</h2>
+<p class="text-on-surface-variant">Real experiences from our beautiful community.</p>
+</div>
+<a class="bg-surface-container-highest text-primary-container px-8 py-4 rounded-xl font-bold flex items-center gap-2 hover:bg-surface-container-high transition-colors" href="https://www.google.com/maps/place/Anu+Hair+And+Beauty+Salon/@-37.8556942,144.6436742,17z/data=!4m18!1m9!3m8!1s0x6ad614c6a5fff309:0xed25918b32477655!2sAnu+Hair+And+Beauty+Salon!8m2!3d-37.8556094!4d144.6430222!9m1!1b1!16s%2Fg%2F11b6bs_k7k!3m7!1s0x6ad614c6a5fff309:0xed25918b32477655!8m2!3d-37.8556094!4d144.6430222!9m1!1b1!16s%2Fg%2F11b6bs_k7k?entry=ttu&g_ep=EgoyMDI2MDQwNi4wIKXMDSoASAFQAw%3D%3D" rel="noopener noreferrer" target="_blank">
+                    View all reviews on Google
+                    <span class="material-symbols-outlined">open_in_new</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Review Card 1 -->
+<div class="bg-background p-6 sm:p-8 rounded-2xl editorial-shadow">
+<div class="flex text-secondary mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-on-surface-variant italic mb-6 leading-relaxed">"Best threading experience in Tarneit. Anu is so meticulous and gentle. I won't go anywhere else!"</p>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center font-bold text-on-secondary-container">P</div>
+<span class="font-bold text-primary-container">Priya S.</span>
+</div>
+</div>
+<!-- Review Card 2 -->
+<div class="bg-background p-6 sm:p-8 rounded-2xl editorial-shadow">
+<div class="flex text-secondary mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-on-surface-variant italic mb-6 leading-relaxed">"Got a keratin treatment here last month and my hair has never looked better. Highly professional!"</p>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center font-bold text-on-secondary-container">M</div>
+<span class="font-bold text-primary-container">Michelle R.</span>
+</div>
+</div>
+<!-- Review Card 3 -->
+<div class="bg-background p-6 sm:p-8 rounded-2xl editorial-shadow">
+<div class="flex text-secondary mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-on-surface-variant italic mb-6 leading-relaxed">"Very affordable pricing for the quality of service you get. Friendly staff and very clean salon."</p>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center font-bold text-on-secondary-container">A</div>
+<span class="font-bold text-primary-container">Amit K.</span>
+</div>
+</div>
+</div>
 </div>
 </section>
-
-<!-- SERVICES -->
-<section>
-<h2 class="title">Our Premium Services</h2>
-
-<div class="grid">
-<div class="card reveal">Hair Cutting & Styling</div>
-<div class="card reveal">Hair Colour & Balayage</div>
-<div class="card reveal">Keratin Treatment</div>
-<div class="card reveal">Threading & Waxing</div>
-<div class="card reveal">Facials & Skin Care</div>
-<div class="card reveal">Makeup & Events</div>
+<!-- ABOUT SECTION -->
+<section class="py-20 md:py-28 bg-background overflow-hidden">
+<div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 items-center">
+<div class="relative">
+<div class="grid grid-cols-2 gap-4">
+<div class="space-y-4 pt-12">
+<div class="rounded-3xl overflow-hidden aspect-square shadow-xl">
+<img class="w-full h-full object-cover" data-alt="Detail shot of high-quality salon products and organized station in a premium aesthetic salon setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqU1Kor0PomoXv-qR_VUjwIEVQGRrlbThn1Lfi44-smgZcpzpCZe0PbLOG-Yf2rnMbJ3yP7j-glqpjjUlm2wYftX4Exb7ht-TXJ3WNjXzYTrhHUJbfrJfD-F0f5zW2cki8CmMbH-ZyeaZF8ANa3elCIhVbdeJC3BzsQCSI3jyhQvBECxZ3fgkfUAw6KyHf9_MOyko2eLRU9V-klnNzPk4qWR3eO0pqpP-aFvE6R1Hwa9nrQB_i42pIaZYO_XydOK_RA4dN2wVecPtw"/>
+</div>
+<div class="bg-secondary p-6 md:p-8 rounded-3xl text-white">
+<h4 class="text-4xl font-serif">10+</h4>
+<p class="text-sm opacity-80 uppercase tracking-widest">Years Experience</p>
+</div>
+</div>
+<div class="space-y-4">
+<div class="rounded-3xl overflow-hidden aspect-[3/4] shadow-xl">
+<img class="w-full h-full object-cover" data-alt="Elegant salon products and premium styling station detail" src="https://images.unsplash.com/photo-1629397685944-7073f5589754?q=80&amp;w=1470&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/>
+</div>
+</div>
+</div>
+</div>
+<div>
+<h2 class="text-3xl sm:text-4xl md:text-5xl font-serif italic text-primary-container mb-8 leading-tight">Personalised Service, <br/> Beautifully Delivered</h2>
+<div class="space-y-6 text-on-surface-variant text-base sm:text-lg leading-relaxed">
+<p>At Anu Hair and Beauty, we believe that every client deserves a tailored approach. Our philosophy is simple: we listen to your needs and craft a look that enhances your natural beauty.</p>
+<p>Whether you're visiting for a quick threading session or a complete hair transformation, our experienced team ensures a relaxing and professional environment. We take pride in being a trusted part of the Tarneit community.</p>
+</div>
+<div class="mt-10 bg-surface-container-lowest border border-surface-container rounded-2xl p-6 md:p-8">
+<h3 class="text-2xl font-serif text-primary-container mb-6">From the Business</h3>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+<div>
+<h4 class="text-sm font-semibold uppercase tracking-wide text-primary-container/80 mb-3">Business</h4>
+<ul class="space-y-2 text-sm text-on-surface-variant">
+<li class="flex items-start gap-2"><span class="material-symbols-outlined text-secondary text-base">check_circle</span><span>Identifies as women-owned</span></li>
+</ul>
+</div>
+<div>
+<h4 class="text-sm font-semibold uppercase tracking-wide text-primary-container/80 mb-3">Planning</h4>
+<ul class="space-y-2 text-sm text-on-surface-variant">
+<li class="flex items-start gap-2"><span class="material-symbols-outlined text-secondary text-base">check_circle</span><span>Appointment required</span></li>
+<li class="flex items-start gap-2"><span class="material-symbols-outlined text-secondary text-base">check_circle</span><span>Appointments recommended</span></li>
+</ul>
+</div>
+<div>
+<h4 class="text-sm font-semibold uppercase tracking-wide text-primary-container/80 mb-3">Payments</h4>
+<ul class="space-y-2 text-sm text-on-surface-variant">
+<li class="flex items-start gap-2"><span class="material-symbols-outlined text-secondary text-base">check_circle</span><span>Credit cards accepted</span></li>
+<li class="flex items-start gap-2"><span class="material-symbols-outlined text-secondary text-base">check_circle</span><span>Debit cards accepted</span></li>
+<li class="flex items-start gap-2"><span class="material-symbols-outlined text-secondary text-base">check_circle</span><span>NFC mobile payments accepted</span></li>
+</ul>
+</div>
+<div>
+<h4 class="text-sm font-semibold uppercase tracking-wide text-primary-container/80 mb-3">Children</h4>
+<ul class="space-y-2 text-sm text-on-surface-variant">
+<li class="flex items-start gap-2"><span class="material-symbols-outlined text-secondary text-base">check_circle</span><span>Good for kids</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
 </div>
 </section>
-
-<!-- ABOUT -->
-<section>
-<h2 class="title">Why Clients Love Us</h2>
-<div class="card reveal">
-<p>
-We focus on personalized beauty, attention to detail, and a relaxing experience.
-Every client leaves feeling confident and refreshed.
-</p>
+<!-- LOCAL SEO SECTION -->
+<section class="py-16 md:py-24 bg-surface-container text-center">
+<div class="max-w-4xl mx-auto px-6">
+<h2 class="text-2xl font-serif text-primary-container mb-8">Serving Our Local Community</h2>
+<div class="flex flex-wrap justify-center gap-4 text-on-surface-variant font-medium">
+<span class="px-4 py-2 bg-surface-container-lowest rounded-full editorial-shadow">Tarneit</span>
+<span class="px-4 py-2 bg-surface-container-lowest rounded-full editorial-shadow">Truganina</span>
+<span class="px-4 py-2 bg-surface-container-lowest rounded-full editorial-shadow">Hoppers Crossing</span>
+<span class="px-4 py-2 bg-surface-container-lowest rounded-full editorial-shadow">Werribee</span>
+<span class="px-4 py-2 bg-surface-container-lowest rounded-full editorial-shadow">Wyndham Vale</span>
+</div>
 </div>
 </section>
-
-<!-- REVIEWS -->
-<section class="reviews">
-<h2 class="title">Client Love</h2>
-
-<div class="grid">
-<div class="card reveal">⭐ “Amazing service and results!”</div>
-<div class="card reveal">⭐ “She listens and delivers perfectly.”</div>
-<div class="card reveal">⭐ “Highly recommend for all beauty services.”</div>
+<!-- GOOGLE MAP SECTION -->
+<section class="py-20 bg-background" id="location">
+<div class="max-w-7xl mx-auto px-6">
+<div class="mb-8 text-center">
+<h2 class="text-3xl md:text-4xl font-serif italic text-primary-container mb-3">Find Us in Tarneit</h2>
+<p class="text-on-surface-variant">Anu Hair And Beauty Salon, 16 Kapok Dr, Tarneit VIC 3029</p>
+</div>
+<div class="rounded-3xl overflow-hidden editorial-shadow border border-surface-container h-[320px] sm:h-[380px] md:h-[420px]">
+<iframe class="w-full h-full" src="https://maps.google.com/maps?q=Anu+Hair+And+Beauty+Salon%2C+16+Kapok+Dr%2C+Tarneit+VIC+3029%2C+Australia&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Map showing Anu Hair And Beauty Salon location"></iframe>
+</div>
 </div>
 </section>
-
-<!-- GALLERY -->
-<section class="gallery">
-<h2 class="title">Our Work</h2>
-
-<div class="grid">
-<img src="https://images.unsplash.com/photo-1487412912498-0447578fcca8">
-<img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15">
-<img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f">
+<!-- FINAL CTA -->
+<section class="py-20 md:py-28 relative">
+<div class="absolute inset-0 bg-primary-container z-0"></div>
+<div class="max-w-7xl mx-auto px-6 relative z-10 text-center">
+<h2 class="text-3xl sm:text-4xl md:text-6xl font-serif italic text-white mb-8">Ready for your next appointment?</h2>
+<p class="text-white/70 text-base sm:text-lg md:text-xl mb-12 max-w-2xl mx-auto">Book your session today and experience the difference of a professional, local salon touch.</p>
+<div class="flex flex-col md:flex-row justify-center gap-6">
+<a class="bg-secondary text-white px-8 sm:px-12 py-4 sm:py-5 rounded-2xl font-bold text-base sm:text-lg editorial-shadow flex items-center justify-center gap-3 hover:scale-[1.05] transition-transform" href="tel:0406907709">
+<span class="material-symbols-outlined">call</span>
+                    Call Now
+                </a>
+<div class="flex gap-4 justify-center">
+<a aria-label="Instagram" class="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-white/10 flex items-center justify-center text-white hover:bg-secondary transition-colors" href="https://www.instagram.com/p/DWzSgfMkpum/" rel="noopener noreferrer" target="_blank">
+<svg aria-hidden="true" class="w-6 h-6 sm:w-7 sm:h-7" fill="currentColor" viewBox="0 0 24 24">
+<path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm-.2 2A3.55 3.55 0 0 0 4 7.55v8.9A3.55 3.55 0 0 0 7.55 20h8.9A3.55 3.55 0 0 0 20 16.45v-8.9A3.55 3.55 0 0 0 16.45 4h-8.9Zm9.95 1.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2.2a2.8 2.8 0 1 0 0 5.6 2.8 2.8 0 0 0 0-5.6Z"/>
+</svg>
+</a>
+<a aria-label="Facebook" class="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-white/10 flex items-center justify-center text-white hover:bg-secondary transition-colors" href="https://www.facebook.com/groups/743439381069294/user/1217460322/" rel="noopener noreferrer" target="_blank">
+<svg aria-hidden="true" class="w-6 h-6 sm:w-7 sm:h-7" fill="currentColor" viewBox="0 0 24 24">
+<path d="M13.5 22v-8h2.7l.4-3h-3.1V9.2c0-.9.3-1.6 1.7-1.6h1.5V4.8c-.3 0-1.2-.1-2.3-.1-2.3 0-3.8 1.4-3.8 3.9V11H8v3h2.6v8h2.9Z"/>
+</svg>
+</a>
+</div>
+</div>
 </div>
 </section>
-
-<!-- CONTACT -->
-<section>
-<h2 class="title">Visit Us</h2>
-<p style="text-align:center;">📍 16 Kapok Drive, Tarneit VIC</p>
-<p style="text-align:center;">📞 0406 907 709</p>
-
-<div style="text-align:center;margin-top:20px;">
-<a href="tel:0406907709" class="btn btn-gold">Call Now</a>
+<!-- FOOTER -->
+<footer class="bg-primary-container dark:bg-[#00030f] py-12 px-6 md:px-12 flex flex-col items-center space-y-8">
+<div class="w-full max-w-7xl grid grid-cols-1 md:grid-cols-3 gap-12 border-b border-white/10 pb-12">
+<div class="space-y-6">
+<img alt="Anu Hair & Beauty Salon logo" class="h-14 sm:h-20 w-auto rounded-lg" src="logo.jpg"/>
+<h4 class="text-lg font-serif text-white">Anu Hair & Beauty Salon</h4>
+<p class="text-[#fcf9f4]/60 text-sm leading-relaxed">Dedicated to providing the highest quality hair and beauty services in a luxurious, welcoming environment. Your satisfaction is our masterpiece.</p>
+<div class="flex gap-4">
+<a aria-label="Instagram" class="text-[#fcf9f4]/60 hover:text-white transition-colors" href="https://www.instagram.com/p/DWzSgfMkpum/" rel="noopener noreferrer" target="_blank">
+<svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+<path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm-.2 2A3.55 3.55 0 0 0 4 7.55v8.9A3.55 3.55 0 0 0 7.55 20h8.9A3.55 3.55 0 0 0 20 16.45v-8.9A3.55 3.55 0 0 0 16.45 4h-8.9Zm9.95 1.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2.2a2.8 2.8 0 1 0 0 5.6 2.8 2.8 0 0 0 0-5.6Z"/>
+</svg>
+</a>
+<a aria-label="Facebook" class="text-[#fcf9f4]/60 hover:text-white transition-colors" href="https://www.facebook.com/groups/743439381069294/user/1217460322/" rel="noopener noreferrer" target="_blank">
+<svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+<path d="M13.5 22v-8h2.7l.4-3h-3.1V9.2c0-.9.3-1.6 1.7-1.6h1.5V4.8c-.3 0-1.2-.1-2.3-.1-2.3 0-3.8 1.4-3.8 3.9V11H8v3h2.6v8h2.9Z"/>
+</svg>
+</a>
 </div>
-</section>
-
-<!-- FLOAT BUTTON -->
-<a href="tel:0406907709" class="call">📞 Call</a>
-
+</div>
+<div class="space-y-6">
+<h4 class="text-lg font-serif text-white">Contact &amp; Location</h4>
+<ul class="space-y-4 text-sm text-[#fcf9f4]/60">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-lg">location_on</span>
+<span>16 Kapok Dr, Tarneit, VIC 3029</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-lg">call</span>
+<a class="hover:text-white transition-colors" href="tel:0406907709">0406907709</a>
+</li>
+</ul>
+</div>
+<div class="space-y-6">
+<h4 class="text-lg font-serif text-white">Hours of Operation</h4>
+<ul class="space-y-2 text-sm text-[#fcf9f4]/60">
+<li class="flex justify-between"><span>Monday:</span> <span>8:00 AM - 8:00 PM</span></li>
+<li class="flex justify-between"><span>Tuesday:</span> <span>8:00 AM - 8:00 PM</span></li>
+<li class="flex justify-between"><span>Wednesday:</span> <span>8:00 AM - 8:00 PM</span></li>
+<li class="flex justify-between"><span>Thursday:</span> <span>8:00 AM - 8:00 PM</span></li>
+<li class="flex justify-between"><span>Friday:</span> <span>8:00 AM - 8:00 PM</span></li>
+<li class="flex justify-between"><span>Saturday:</span> <span>8:00 AM - 8:00 PM</span></li>
+<li class="flex justify-between"><span>Sunday:</span> <span>8:00 AM - 8:00 PM</span></li>
+</ul>
+</div>
+</div>
+<div class="w-full max-w-7xl flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="text-[#fcf9f4]/60 text-sm">© <span id="copyright-year"></span> Anu Hair &amp; Beauty Salon. All Rights Reserved.</p>
+</div>
+</footer>
+<!-- Schema.org for LocalBusiness -->
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BeautySalon",
+      "name": "Anu Hair And Beauty Salon",
+      "image": "image-1",
+      "@id": "",
+      "url": "https://anuhairandbeauty.com.au",
+      "telephone": "0406907709",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "16 Kapok Dr",
+        "addressLocality": "Tarneit",
+        "addressRegion": "VIC",
+        "postalCode": "3029",
+        "addressCountry": "AU"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -37.8344,
+        "longitude": 144.6853
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+          "opens": "08:00",
+          "closes": "20:00"
+        }
+      ],
+      "sameAs": [
+        "https://www.facebook.com/AnuHairAndBeautySalon",
+        "https://www.instagram.com/AnuHairAndBeautySalon"
+      ],
+      "priceRange": "$$"
+    }
+    </script>
 <script>
-// SCROLL ANIMATION
-window.addEventListener('scroll',()=>{
-document.querySelectorAll('.reveal').forEach(el=>{
-let top=el.getBoundingClientRect().top;
-let height=window.innerHeight;
-if(top<height-100){
-el.classList.add('active');
-}
-});
-});
+    document.getElementById("copyright-year").textContent = new Date().getFullYear();
 </script>
-
-</body>
-</html>
+</body></html>
